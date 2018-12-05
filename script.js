@@ -208,13 +208,13 @@ function MyFirstConstructor(titel, fysiek, magie, level, beschikbaar) {
         this.available = beschikbaar;         
     };
 
-zwaard = MyFirstConstructor("dragonsword",150,20,10,true);
-bijl = MyFirstConstructor("battleaxe",100,0,5,false);
-scepter = MyFirstConstructor("magicscepter",0,150,20,true);
+let zwaard = new MyFirstConstructor("dragonsword",150,20,10,true);
+let bijl = new MyFirstConstructor("battleaxe",100,0,5,false);
+let scepter = new MyFirstConstructor("magicscepter",0,150,20,true);
 
-console.log(zwaard.title);
+
 weaponArray = [zwaard,bijl,scepter];
 
-for (i=0;i<=weaponArray.length;i++){
+for (i=0;i<weaponArray.length;i++){
     console.log(weaponArray[i].title);
 }
