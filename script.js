@@ -218,3 +218,36 @@ weaponArray = [zwaard,bijl,scepter];
 for (i=0;i<weaponArray.length;i++){
     console.log(weaponArray[i].title);
 }
+
+for (i=0;i<weaponArray.length;i++){
+    if (weaponArray[i].available === true){
+        console.log(weaponArray[i].title);
+    }
+    
+}
+
+for (i=0;i<weaponArray.length;i++){
+    if (weaponArray[i].minLevel >=10){
+        console.log(weaponArray[i].title);
+    }
+    
+}
+
+// oefening 3 objecten
+let weapon = {
+        name : "dragonslayer",
+        damage : 10       
+    };
+let mainCharacter = {
+        name : "Quinn",
+        level : 4,
+        life : 100,
+        wapen: weapon,
+        attack : function(){
+            console.log(this.name + " aanval met het wapen "+ weapon.name + " de schade is "+ this.level*weapon.damage );
+        }
+
+    };
+
+mainCharacter.attack();
+
