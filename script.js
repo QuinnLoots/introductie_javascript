@@ -165,6 +165,8 @@ floatSpeed=10.4;
 lowSpeed= Math.floor(floatSpeed);
 highSpeed= Math.ceil(floatSpeed);
 
+console.log(lowSpeed);
+console.log(highSpeed);
 
 //oefening 3 math
 
@@ -212,26 +214,39 @@ let zwaard = new MyFirstConstructor("dragonsword",150,20,10,true);
 let bijl = new MyFirstConstructor("battleaxe",100,0,5,false);
 let scepter = new MyFirstConstructor("magicscepter",0,150,20,true);
 
-
 weaponArray = [zwaard,bijl,scepter];
 
-for (i=0;i<weaponArray.length;i++){
+var allObjects = function() {
+   for (i=0;i<weaponArray.length;i++){
     console.log(weaponArray[i].title);
 }
+}
 
-for (i=0;i<weaponArray.length;i++){
+var availableObjects = function() {
+ for (i=0;i<weaponArray.length;i++){
     if (weaponArray[i].available === true){
         console.log(weaponArray[i].title);
     }
     
+}  
+
 }
 
-for (i=0;i<weaponArray.length;i++){
+var minLvlObjects = function() {
+ for (i=0;i<weaponArray.length;i++){
     if (weaponArray[i].minLevel >=10){
         console.log(weaponArray[i].title);
     }
     
 }
+
+}
+
+
+
+
+
+
 
 // oefening 3 objecten
 let weapon = {
